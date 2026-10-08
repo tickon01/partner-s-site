@@ -1,0 +1,214 @@
+<section class="logos-audience">
+  <style>
+    .logos-audience{
+      --lu-navy:#0f1b2e;
+      --lu-navy-2:#14243d;
+      --lu-teal:#4bb3b6;
+      --lu-teal-dark:#3a9497;
+      --lu-text-muted:rgba(255,255,255,.6);
+      --lu-border:rgba(255,255,255,.08);
+      box-sizing:border-box;
+      width:100%;
+      background:var(--lu-navy);
+      padding:96px 24px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    }
+    .logos-audience *{box-sizing:border-box;}
+    .logos-audience__inner{
+      max-width:1200px;
+      margin:0 auto;
+    }
+    .logos-audience__eyebrow{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:var(--lu-teal);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+    .logos-audience__eyebrow::before{
+      content:"";
+      display:block;
+      width:32px;
+      height:2px;
+      background:var(--lu-teal);
+    }
+    .logos-audience__head{
+      max-width:640px;
+      margin:0 auto 56px;
+      text-align:center;
+    }
+    .logos-audience__head .logos-audience__eyebrow{justify-content:center;}
+    .logos-audience__title{
+      color:#fff;
+      font-size:40px;
+      line-height:1.2;
+      font-weight:800;
+      margin:0 0 16px;
+    }
+    .logos-audience__title em{
+      color:var(--lu-teal);
+      font-style:italic;
+    }
+    .logos-audience__subtitle{
+      color:var(--lu-text-muted);
+      font-size:16px;
+      line-height:1.6;
+      margin:0;
+    }
+    .logos-audience__grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:20px;
+      margin-bottom:48px;
+    }
+    .logos-audience__card{
+      position:relative;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--lu-border);
+      border-radius:16px;
+      padding:28px 20px;
+      transition:transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+    .logos-audience__card:hover{
+      transform:translateY(-6px);
+      border-color:var(--lu-teal);
+      background:rgba(75,179,182,.06);
+    }
+    .logos-audience__icon{
+      width:48px;
+      height:48px;
+      border-radius:12px;
+      background:rgba(75,179,182,.15);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:18px;
+    }
+    .logos-audience__icon svg{width:24px;height:24px;stroke:var(--lu-teal);}
+    .logos-audience__card h3{
+      color:#fff;
+      font-size:16px;
+      font-weight:700;
+      margin:0 0 8px;
+      line-height:1.35;
+    }
+    .logos-audience__card p{
+      color:var(--lu-text-muted);
+      font-size:13.5px;
+      line-height:1.55;
+      margin:0;
+    }
+    .logos-audience__note{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      background:var(--lu-navy-2);
+      border:1px solid var(--lu-border);
+      border-radius:16px;
+      padding:24px 28px;
+    }
+    .logos-audience__note p{
+      color:#fff;
+      font-size:15px;
+      line-height:1.5;
+      margin:0;
+      max-width:560px;
+    }
+    .logos-audience__note p b{color:var(--lu-teal);}
+    .logos-audience__note a{
+      flex:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:transparent;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:10px;
+      padding:12px 22px;
+      font-size:14px;
+      font-weight:700;
+      text-decoration:none;
+      white-space:nowrap;
+      transition:border-color .2s ease, background .2s ease;
+    }
+    .logos-audience__note a:hover{
+      border-color:var(--lu-teal);
+      background:rgba(75,179,182,.1);
+    }
+
+    @media (max-width:980px){
+      .logos-audience__grid{grid-template-columns:repeat(3,1fr);}
+      .logos-audience__title{font-size:32px;}
+    }
+    @media (max-width:640px){
+      .logos-audience{padding:64px 16px;}
+      .logos-audience__grid{grid-template-columns:repeat(2,1fr);}
+      .logos-audience__note{flex-direction:column;align-items:flex-start;}
+      .logos-audience__note a{width:100%;justify-content:center;}
+    }
+  </style>
+
+  <div class="logos-audience__inner">
+    <div class="logos-audience__head">
+      <div class="logos-audience__eyebrow">Кому подходит</div>
+      <h2 class="logos-audience__title">Партнёром может стать <em>любой, у кого есть клиенты</em></h2>
+      <p class="logos-audience__subtitle">
+        Программа рассчитана на специалистов, к которым клиенты уже обращаются
+        за смежными услугами — и частных лиц, готовых рекомендовать нас знакомым.
+      </p>
+    </div>
+
+    <div class="logos-audience__grid">
+      <div class="logos-audience__card">
+        <div class="logos-audience__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5M5 9.5V20h14V9.5M9.5 20v-6h5v6"/></svg>
+        </div>
+        <h3>Агенты по&nbsp;недвижимости</h3>
+        <p>Подключаете юридическую проверку сделки клиенту, которого уже ведёте.</p>
+      </div>
+
+      <div class="logos-audience__card">
+        <div class="logos-audience__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M8 6V4h8v2"/></svg>
+        </div>
+        <h3>Ипотечные и кредитные брокеры</h3>
+        <p>Даёте клиентам экспертную проверку документов перед сделкой.</p>
+      </div>
+
+      <div class="logos-audience__card">
+        <div class="logos-audience__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7v4c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V7l-8-4z"/></svg>
+        </div>
+        <h3>Юристы и консультанты</h3>
+        <p>Расширяете портфель услуг экспертизой ГК «Логос» в сложных делах.</p>
+      </div>
+
+      <div class="logos-audience__card">
+        <div class="logos-audience__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a1 1 0 0 1 1-1h10l5 5v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M8 13h8M8 17h5M14 4v5h5"/></svg>
+        </div>
+        <h3>Бухгалтеры и финансисты</h3>
+        <p>Направляете бизнес-клиентов, которым нужна юридическая поддержка.</p>
+      </div>
+
+      <div class="logos-audience__card">
+        <div class="logos-audience__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg>
+        </div>
+        <h3>Частные лица</h3>
+        <p>Рекомендуете нас знакомым и получаете вознаграждение за каждого клиента.</p>
+      </div>
+    </div>
+
+    <div class="logos-audience__note">
+      <p>Не нашли свою категорию? <b>Это не проблема</b> — оставьте заявку, и мы обсудим формат сотрудничества индивидуально.</p>
+      <a href="#lead-form">Оставить заявку</a>
+    </div>
+  </div>
+</section>

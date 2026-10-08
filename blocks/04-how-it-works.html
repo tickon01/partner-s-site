@@ -1,0 +1,206 @@
+<section class="logos-steps">
+  <style>
+    .logos-steps{
+      --ls-navy:#0f1b2e;
+      --ls-navy-2:#14243d;
+      --ls-teal:#4bb3b6;
+      --ls-teal-dark:#3a9497;
+      --ls-text-muted:#5c6b7e;
+      --ls-border:#e0e5eb;
+      box-sizing:border-box;
+      width:100%;
+      background:#f6f8fa;
+      padding:96px 24px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    }
+    .logos-steps *{box-sizing:border-box;}
+    .logos-steps__inner{
+      max-width:1200px;
+      margin:0 auto;
+    }
+    .logos-steps__eyebrow{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      color:var(--ls-teal-dark);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+    .logos-steps__eyebrow::before{
+      content:"";
+      display:block;
+      width:32px;
+      height:2px;
+      background:var(--ls-teal);
+    }
+    .logos-steps__head{
+      max-width:620px;
+      margin:0 auto 64px;
+      text-align:center;
+    }
+    .logos-steps__title{
+      color:var(--ls-navy);
+      font-size:40px;
+      line-height:1.2;
+      font-weight:800;
+      margin:0 0 16px;
+    }
+    .logos-steps__title em{
+      color:var(--ls-teal-dark);
+      font-style:italic;
+    }
+    .logos-steps__subtitle{
+      color:var(--ls-text-muted);
+      font-size:16px;
+      line-height:1.6;
+      margin:0;
+    }
+    .logos-steps__row{
+      display:flex;
+      align-items:flex-start;
+      gap:0;
+      margin-bottom:48px;
+    }
+    .logos-steps__step{
+      position:relative;
+      flex:1;
+      text-align:center;
+      padding:0 16px;
+    }
+    .logos-steps__num{
+      position:relative;
+      z-index:2;
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      background:var(--ls-navy);
+      color:var(--ls-teal);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 20px;
+      font-size:16px;
+      font-weight:800;
+    }
+    .logos-steps__step:not(:first-child)::before{
+      content:"";
+      position:absolute;
+      z-index:1;
+      top:24px;
+      left:0;
+      width:50%;
+      height:2px;
+      background:var(--ls-border);
+    }
+    .logos-steps__step:not(:last-child)::after{
+      content:"";
+      position:absolute;
+      z-index:1;
+      top:24px;
+      left:50%;
+      width:50%;
+      height:2px;
+      background:var(--ls-border);
+    }
+    .logos-steps__step h3{
+      color:var(--ls-navy);
+      font-size:16.5px;
+      font-weight:700;
+      margin:0 0 10px;
+      line-height:1.35;
+    }
+    .logos-steps__step p{
+      color:var(--ls-text-muted);
+      font-size:14px;
+      line-height:1.6;
+      margin:0;
+      max-width:230px;
+      margin-inline:auto;
+    }
+    .logos-steps__note{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      text-align:center;
+      color:var(--ls-navy);
+      font-size:15px;
+    }
+    .logos-steps__note b{color:var(--ls-teal-dark);}
+
+    @media (max-width:760px){
+      .logos-steps{padding:64px 16px;}
+      .logos-steps__title{font-size:32px;}
+      .logos-steps__row{flex-direction:column;gap:32px;}
+      .logos-steps__step{
+        display:flex;
+        align-items:flex-start;
+        gap:18px;
+        text-align:left;
+        padding:0;
+        width:100%;
+      }
+      .logos-steps__num{margin:0;flex:none;}
+      .logos-steps__step p{max-width:none;margin-inline:0;}
+      .logos-steps__step:not(:first-child)::before,
+      .logos-steps__step:not(:last-child)::after{
+        display:none;
+      }
+      .logos-steps__step:not(:last-child)::after{
+        display:block;
+        content:"";
+        position:absolute;
+        z-index:1;
+        left:23px;
+        top:48px;
+        bottom:-32px;
+        width:2px;
+        height:auto;
+        background:var(--ls-border);
+      }
+    }
+  </style>
+
+  <div class="logos-steps__inner">
+    <div class="logos-steps__head">
+      <div class="logos-steps__eyebrow">Как это работает</div>
+      <h2 class="logos-steps__title">От заявки до <em>первой выплаты</em> — четыре шага</h2>
+      <p class="logos-steps__subtitle">
+        Простой процесс без лишних согласований: вы приводите клиента,
+        всё остальное берёт на себя ГК «Логос».
+      </p>
+    </div>
+
+    <div class="logos-steps__row">
+      <div class="logos-steps__step">
+        <div class="logos-steps__num">01</div>
+        <h3>Регистрация</h3>
+        <p>Заполняете заявку и подписываете партнёрский договор — занимает один день.</p>
+      </div>
+
+      <div class="logos-steps__step">
+        <div class="logos-steps__num">02</div>
+        <h3>Передача клиента</h3>
+        <p>Оставляете контакты клиента в личном кабинете или у своего куратора.</p>
+      </div>
+
+      <div class="logos-steps__step">
+        <div class="logos-steps__num">03</div>
+        <h3>Сопровождение сделки</h3>
+        <p>Юристы ГК «Логос» ведут клиента от консультации до закрытия дела.</p>
+      </div>
+
+      <div class="logos-steps__step">
+        <div class="logos-steps__num">04</div>
+        <h3>Выплата вознаграждения</h3>
+        <p>Комиссия начисляется автоматически и уходит в ближайший расчётный день.</p>
+      </div>
+    </div>
+
+    <p class="logos-steps__note">Средний срок от передачи клиента до выплаты — <b>30–45 дней</b></p>
+  </div>
+</section>

@@ -1,0 +1,276 @@
+<section class="logos-tiers">
+  <style>
+    .logos-tiers{
+      --lt-navy:#0f1b2e;
+      --lt-navy-2:#14243d;
+      --lt-teal:#4bb3b6;
+      --lt-teal-dark:#3a9497;
+      --lt-text-muted:rgba(255,255,255,.6);
+      --lt-border:rgba(255,255,255,.08);
+      box-sizing:border-box;
+      width:100%;
+      background:var(--lt-navy);
+      padding:96px 24px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    }
+    .logos-tiers *{box-sizing:border-box;}
+    .logos-tiers__inner{
+      max-width:1200px;
+      margin:0 auto;
+    }
+    .logos-tiers__eyebrow{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      color:var(--lt-teal);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+    .logos-tiers__eyebrow::before{
+      content:"";
+      display:block;
+      width:32px;
+      height:2px;
+      background:var(--lt-teal);
+    }
+    .logos-tiers__head{
+      max-width:620px;
+      margin:0 auto 56px;
+      text-align:center;
+    }
+    .logos-tiers__title{
+      color:#fff;
+      font-size:40px;
+      line-height:1.2;
+      font-weight:800;
+      margin:0 0 16px;
+    }
+    .logos-tiers__title em{
+      color:var(--lt-teal);
+      font-style:italic;
+    }
+    .logos-tiers__subtitle{
+      color:var(--lt-text-muted);
+      font-size:16px;
+      line-height:1.6;
+      margin:0;
+    }
+    .logos-tiers__grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      align-items:stretch;
+      margin-bottom:40px;
+    }
+    .logos-tiers__card{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--lt-border);
+      border-radius:20px;
+      padding:36px 28px;
+    }
+    .logos-tiers__card--featured{
+      background:var(--lt-navy-2);
+      border-color:var(--lt-teal);
+      box-shadow:0 24px 48px rgba(75,179,182,.15);
+    }
+    .logos-tiers__badge{
+      position:absolute;
+      top:-13px;
+      left:50%;
+      transform:translateX(-50%);
+      background:var(--lt-teal);
+      color:var(--lt-navy);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      padding:6px 14px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    .logos-tiers__card-head{
+      margin-bottom:24px;
+    }
+    .logos-tiers__name{
+      display:block;
+      color:#fff;
+      font-size:20px;
+      font-weight:800;
+      margin-bottom:6px;
+    }
+    .logos-tiers__threshold{
+      color:var(--lt-text-muted);
+      font-size:13.5px;
+    }
+    .logos-tiers__rate{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      padding-bottom:24px;
+      margin-bottom:24px;
+      border-bottom:1px solid var(--lt-border);
+    }
+    .logos-tiers__rate b{
+      color:var(--lt-teal);
+      font-size:44px;
+      font-weight:800;
+      line-height:1;
+    }
+    .logos-tiers__rate span{
+      color:var(--lt-text-muted);
+      font-size:13.5px;
+      line-height:1.4;
+    }
+    .logos-tiers__list{
+      list-style:none;
+      margin:0 0 28px;
+      padding:0;
+      flex:1;
+    }
+    .logos-tiers__list li{
+      position:relative;
+      color:rgba(255,255,255,.85);
+      font-size:14.5px;
+      line-height:1.5;
+      padding-left:26px;
+      margin-bottom:14px;
+    }
+    .logos-tiers__list li:last-child{margin-bottom:0;}
+    .logos-tiers__list li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:3px;
+      width:16px;
+      height:16px;
+      border-radius:50%;
+      background:rgba(75,179,182,.15);
+      border:1px solid var(--lt-teal);
+    }
+    .logos-tiers__list li::after{
+      content:"";
+      position:absolute;
+      left:4px;
+      top:7px;
+      width:8px;
+      height:4px;
+      border-left:2px solid var(--lt-teal);
+      border-bottom:2px solid var(--lt-teal);
+      transform:rotate(-45deg);
+    }
+    .logos-tiers__cta{
+      display:block;
+      text-align:center;
+      background:transparent;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:10px;
+      padding:14px 20px;
+      font-size:14.5px;
+      font-weight:700;
+      text-decoration:none;
+      transition:border-color .2s ease, background .2s ease;
+    }
+    .logos-tiers__card--featured .logos-tiers__cta{
+      background:var(--lt-teal);
+      border-color:var(--lt-teal);
+      color:var(--lt-navy);
+    }
+    .logos-tiers__cta:hover{
+      border-color:var(--lt-teal);
+      background:rgba(75,179,182,.1);
+    }
+    .logos-tiers__card--featured .logos-tiers__cta:hover{
+      background:var(--lt-teal-dark);
+      border-color:var(--lt-teal-dark);
+    }
+    .logos-tiers__note{
+      text-align:center;
+      color:var(--lt-text-muted);
+      font-size:13.5px;
+      margin:0;
+    }
+
+    @media (max-width:900px){
+      .logos-tiers__grid{grid-template-columns:1fr;max-width:400px;margin-inline:auto;margin-bottom:40px;}
+    }
+    @media (max-width:640px){
+      .logos-tiers{padding:64px 16px;}
+      .logos-tiers__title{font-size:32px;}
+    }
+  </style>
+
+  <div class="logos-tiers__inner">
+    <div class="logos-tiers__head">
+      <div class="logos-tiers__eyebrow">Условия партнёрства</div>
+      <h2 class="logos-tiers__title">Чем больше клиентов — <em>тем выше уровень</em></h2>
+      <p class="logos-tiers__subtitle">
+        Уровень и процент комиссии растут вместе с числом переданных клиентов
+        и пересчитываются автоматически каждый квартал.
+      </p>
+    </div>
+
+    <div class="logos-tiers__grid">
+      <div class="logos-tiers__card">
+        <div class="logos-tiers__card-head">
+          <span class="logos-tiers__name">Базовый</span>
+          <span class="logos-tiers__threshold">С первого переданного клиента</span>
+        </div>
+        <div class="logos-tiers__rate">
+          <b>5%</b>
+          <span>комиссии с&nbsp;каждой закрытой сделки</span>
+        </div>
+        <ul class="logos-tiers__list">
+          <li>Выплаты раз в месяц</li>
+          <li>Личный кабинет со статистикой</li>
+          <li>Поддержка в общем чате кураторов</li>
+        </ul>
+        <a class="logos-tiers__cta" href="#lead-form">Стать партнёром</a>
+      </div>
+
+      <div class="logos-tiers__card">
+        <div class="logos-tiers__card-head">
+          <span class="logos-tiers__name">Серебряный</span>
+          <span class="logos-tiers__threshold">От 5 сделок за квартал</span>
+        </div>
+        <div class="logos-tiers__rate">
+          <b>7%</b>
+          <span>комиссии с&nbsp;каждой закрытой сделки</span>
+        </div>
+        <ul class="logos-tiers__list">
+          <li>Выплаты раз в месяц</li>
+          <li>Закреплённый персональный куратор</li>
+          <li>Приоритетная обработка заявок</li>
+        </ul>
+        <a class="logos-tiers__cta" href="#lead-form">Стать партнёром</a>
+      </div>
+
+      <div class="logos-tiers__card logos-tiers__card--featured">
+        <span class="logos-tiers__badge">Максимальный доход</span>
+        <div class="logos-tiers__card-head">
+          <span class="logos-tiers__name">Золотой</span>
+          <span class="logos-tiers__threshold">От 15 сделок за квартал</span>
+        </div>
+        <div class="logos-tiers__rate">
+          <b>10%</b>
+          <span>комиссии с&nbsp;каждой закрытой сделки</span>
+        </div>
+        <ul class="logos-tiers__list">
+          <li>Выплаты 2 раза в месяц</li>
+          <li>Персональный менеджер и приоритет по делам</li>
+          <li>Квартальные бонусы за объём</li>
+        </ul>
+        <a class="logos-tiers__cta" href="#lead-form">Стать партнёром</a>
+      </div>
+    </div>
+
+    <p class="logos-tiers__note">Уровень пересматривается автоматически по итогам каждого квартала — переход возможен как вверх, так и вниз.</p>
+  </div>
+</section>
