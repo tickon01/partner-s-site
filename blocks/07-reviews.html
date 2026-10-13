@@ -1,0 +1,102 @@
+<section class="logos-reviews">
+  <style>
+    .logos-reviews{
+      --lv-navy:#0f1b2e;
+      --lv-navy-2:#14243d;
+      --lv-teal:#4bb3b6;
+      --lv-text-muted:rgba(255,255,255,.6);
+      --lv-border:rgba(255,255,255,.08);
+      box-sizing:border-box;
+      width:100%;
+      background:var(--lv-navy);
+      padding:96px 24px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    }
+    .logos-reviews *{box-sizing:border-box;}
+    .logos-reviews__inner{max-width:1200px;margin:0 auto;}
+    .logos-reviews__eyebrow{
+      display:flex;align-items:center;justify-content:center;gap:12px;
+      color:var(--lv-teal);font-size:13px;font-weight:700;
+      letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;
+    }
+    .logos-reviews__eyebrow::before{content:"";display:block;width:32px;height:2px;background:var(--lv-teal);}
+    .logos-reviews__head{max-width:620px;margin:0 auto 56px;text-align:center;}
+    .logos-reviews__title{color:#fff;font-size:40px;line-height:1.2;font-weight:800;margin:0 0 16px;}
+    .logos-reviews__title em{color:var(--lv-teal);font-style:italic;}
+    .logos-reviews__subtitle{color:var(--lv-text-muted);font-size:16px;line-height:1.6;margin:0;}
+    .logos-reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .logos-reviews__card{
+      display:flex;flex-direction:column;
+      background:rgba(255,255,255,.03);border:1px solid var(--lv-border);
+      border-radius:20px;padding:32px 28px;
+      transition:border-color .25s ease, background .25s ease;
+    }
+    .logos-reviews__card:hover{border-color:var(--lv-teal);background:rgba(75,179,182,.05);}
+    .logos-reviews__result{
+      align-self:flex-start;
+      background:rgba(75,179,182,.15);color:var(--lv-teal);
+      font-size:12.5px;font-weight:700;letter-spacing:.04em;
+      padding:6px 12px;border-radius:999px;margin-bottom:20px;
+    }
+    .logos-reviews__text{
+      flex:1;color:rgba(255,255,255,.88);font-size:15.5px;line-height:1.65;margin:0 0 28px;
+    }
+    .logos-reviews__author{
+      display:flex;align-items:center;gap:14px;
+      padding-top:20px;border-top:1px solid var(--lv-border);
+    }
+    .logos-reviews__avatar{
+      flex:none;width:46px;height:46px;border-radius:50%;
+      background:var(--lv-navy-2);border:1px solid var(--lv-teal);color:var(--lv-teal);
+      display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;
+    }
+    .logos-reviews__author b{display:block;color:#fff;font-size:15px;font-weight:700;margin-bottom:2px;}
+    .logos-reviews__author span{color:var(--lv-text-muted);font-size:13px;}
+    @media (max-width:980px){
+      .logos-reviews__grid{grid-template-columns:1fr;max-width:560px;margin-inline:auto;}
+      .logos-reviews__title{font-size:32px;}
+    }
+    @media (max-width:640px){
+      .logos-reviews{padding:64px 16px;}
+      .logos-reviews__card{padding:26px 20px;}
+    }
+  </style>
+
+  <!-- ЗАГЛУШКИ: имена, города, суммы и тексты отзывов замените на реальные -->
+  <div class="logos-reviews__inner">
+    <div class="logos-reviews__head">
+      <div class="logos-reviews__eyebrow">Отзывы партнёров</div>
+      <h2 class="logos-reviews__title">Партнёры о работе <em>с ГК «Логос»</em></h2>
+      <p class="logos-reviews__subtitle">Те, кто уже рекомендует нас клиентам, рассказывают, как устроено сотрудничество.</p>
+    </div>
+
+    <div class="logos-reviews__grid">
+      <div class="logos-reviews__card">
+        <div class="logos-reviews__result">Золотой уровень</div>
+        <p class="logos-reviews__text">«Раньше клиенты уходили к юристам, а я ничего с этого не получал. Теперь передаю их в «Логос», юристы ведут дело, а я вижу статус в кабинете и получаю выплату в срок.»</p>
+        <div class="logos-reviews__author">
+          <div class="logos-reviews__avatar">АП</div>
+          <div><b>Алексей П.</b><span>Агент по недвижимости, Москва</span></div>
+        </div>
+      </div>
+
+      <div class="logos-reviews__card">
+        <div class="logos-reviews__result">Серебряный уровень</div>
+        <p class="logos-reviews__text">«Главное — прозрачность. Договор понятный, проценты прописаны, вопросы решает персональный куратор в тот же день. За полгода дошёл до следующего уровня.»</p>
+        <div class="logos-reviews__author">
+          <div class="logos-reviews__avatar">МС</div>
+          <div><b>Мария С.</b><span>Ипотечный брокер, Санкт-Петербург</span></div>
+        </div>
+      </div>
+
+      <div class="logos-reviews__card">
+        <div class="logos-reviews__result">Базовый уровень</div>
+        <p class="logos-reviews__text">«Начинала с одного клиента из знакомых. Ничего не нужно знать в юриспруденции — всё объяснили и сопроводили. Приятный дополнительный доход без лишних хлопот.»</p>
+        <div class="logos-reviews__author">
+          <div class="logos-reviews__avatar">ЕК</div>
+          <div><b>Екатерина К.</b><span>Частный партнёр, Казань</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
