@@ -1,0 +1,109 @@
+<section class="logos-trust">
+  <style>
+    .logos-trust{
+      --lr-navy:#0f1b2e;
+      --lr-navy-2:#14243d;
+      --lr-teal:#4bb3b6;
+      --lr-teal-dark:#3a9497;
+      --lr-text-muted:#5c6b7e;
+      --lr-border:#e0e5eb;
+      box-sizing:border-box;
+      width:100%;
+      background:#f6f8fa;
+      padding:96px 24px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    }
+    .logos-trust *{box-sizing:border-box;}
+    .logos-trust__inner{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.15fr 1fr;
+      gap:56px;
+      align-items:start;
+    }
+    .logos-trust__eyebrow{
+      display:flex;align-items:center;gap:12px;
+      color:var(--lr-teal-dark);font-size:13px;font-weight:700;
+      letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;
+    }
+    .logos-trust__eyebrow::before{content:"";display:block;width:32px;height:2px;background:var(--lr-teal);}
+    .logos-trust__title{color:var(--lr-navy);font-size:40px;line-height:1.2;font-weight:800;margin:0 0 16px;}
+    .logos-trust__title em{color:var(--lr-teal-dark);font-style:italic;}
+    .logos-trust__subtitle{color:var(--lr-text-muted);font-size:16px;line-height:1.6;margin:0 0 36px;max-width:520px;}
+    .logos-trust__stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+    .logos-trust__stat{
+      background:#fff;border:1px solid var(--lr-border);border-radius:16px;padding:24px;
+    }
+    .logos-trust__stat b{
+      display:block;color:var(--lr-navy);font-size:34px;font-weight:800;line-height:1.1;margin-bottom:8px;
+      font-variant-numeric:tabular-nums;
+    }
+    .logos-trust__stat b span{color:var(--lr-teal-dark);}
+    .logos-trust__stat small{color:var(--lr-text-muted);font-size:13.5px;line-height:1.4;}
+    .logos-trust__panel{
+      background:var(--lr-navy);border-radius:20px;padding:36px 32px;color:#fff;
+    }
+    .logos-trust__panel h3{font-size:20px;font-weight:800;margin:0 0 6px;}
+    .logos-trust__panel > p{color:rgba(255,255,255,.6);font-size:14px;line-height:1.55;margin:0 0 24px;}
+    .logos-trust__list{list-style:none;margin:0;padding:0;}
+    .logos-trust__list li{
+      display:flex;gap:14px;align-items:flex-start;
+      padding:16px 0;border-top:1px solid rgba(255,255,255,.08);
+    }
+    .logos-trust__list li:first-child{border-top:0;padding-top:0;}
+    .logos-trust__ico{
+      flex:none;width:40px;height:40px;border-radius:10px;background:rgba(75,179,182,.15);
+      display:flex;align-items:center;justify-content:center;
+    }
+    .logos-trust__ico svg{width:20px;height:20px;stroke:var(--lr-teal);}
+    .logos-trust__list b{display:block;font-size:15px;font-weight:700;margin-bottom:3px;}
+    .logos-trust__list span{color:rgba(255,255,255,.6);font-size:13.5px;line-height:1.5;}
+    @media (max-width:980px){
+      .logos-trust__inner{grid-template-columns:1fr;gap:40px;}
+      .logos-trust__title{font-size:32px;}
+    }
+    @media (max-width:640px){
+      .logos-trust{padding:64px 16px;}
+      .logos-trust__stat{padding:20px 16px;}
+      .logos-trust__stat b{font-size:28px;}
+      .logos-trust__panel{padding:28px 20px;}
+    }
+  </style>
+
+  <div class="logos-trust__inner">
+    <div>
+      <div class="logos-trust__eyebrow">Цифры и доверие</div>
+      <h2 class="logos-trust__title">Надёжная компания, <em>которой доверяют клиенты</em></h2>
+      <p class="logos-trust__subtitle">
+        Десять лет на юридическом рынке и сотни партнёров, которые уже зарабатывают
+        на рекомендациях ГК «Логос».
+      </p>
+      <div class="logos-trust__stats">
+        <div class="logos-trust__stat"><b>10<span>+</span></b><small>лет на юридическом рынке</small></div>
+        <div class="logos-trust__stat"><b>1 200<span>+</span></b><small>клиентов обращаются ежегодно</small></div>
+        <div class="logos-trust__stat"><b>300<span>+</span></b><small>действующих партнёров</small></div>
+        <div class="logos-trust__stat"><b>98<span>%</span></b><small>выплат приходит в срок</small></div>
+      </div>
+    </div>
+
+    <div class="logos-trust__panel">
+      <h3>Гарантии для партнёров</h3>
+      <p>Всё закреплено документами — вы всегда знаете, на каких условиях работаете.</p>
+      <ul class="logos-trust__list">
+        <li>
+          <div class="logos-trust__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7v4c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V7l-8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div><b>Лицензированная деятельность</b><span>Компания работает на основании действующих лицензий и разрешений.</span></div>
+        </li>
+        <li>
+          <div class="logos-trust__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a1 1 0 0 1 1-1h10l5 5v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M8 13h8M8 17h5"/></svg></div>
+          <div><b>Официальный договор</b><span>Размер и сроки вознаграждения прописаны в партнёрском соглашении.</span></div>
+        </li>
+        <li>
+          <div class="logos-trust__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div>
+          <div><b>Гарантированные выплаты</b><span>Расчёт в фиксированный день, подробная детализация в личном кабинете.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
