@@ -1,0 +1,112 @@
+<section class="logos-faq">
+  <style>
+    .logos-faq{
+      --lf-navy:#0f1b2e;
+      --lf-teal:#4bb3b6;
+      --lf-teal-dark:#3a9497;
+      --lf-text-muted:#5c6b7e;
+      --lf-border:#e0e5eb;
+      box-sizing:border-box;
+      width:100%;
+      background:#f6f8fa;
+      padding:96px 24px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    }
+    .logos-faq *{box-sizing:border-box;}
+    .logos-faq__inner{
+      max-width:1100px;margin:0 auto;
+      display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start;
+    }
+    .logos-faq__eyebrow{
+      display:flex;align-items:center;gap:12px;
+      color:var(--lf-teal-dark);font-size:13px;font-weight:700;
+      letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;
+    }
+    .logos-faq__eyebrow::before{content:"";display:block;width:32px;height:2px;background:var(--lf-teal);}
+    .logos-faq__title{color:var(--lf-navy);font-size:40px;line-height:1.2;font-weight:800;margin:0 0 16px;}
+    .logos-faq__title em{color:var(--lf-teal-dark);font-style:italic;}
+    .logos-faq__subtitle{color:var(--lf-text-muted);font-size:16px;line-height:1.6;margin:0 0 24px;}
+    .logos-faq__ask{
+      display:inline-block;color:var(--lf-navy);font-size:14.5px;font-weight:700;
+      text-decoration:none;border-bottom:2px solid var(--lf-teal);padding-bottom:2px;
+    }
+    .logos-faq__ask:hover{color:var(--lf-teal-dark);}
+    .logos-faq__list{display:flex;flex-direction:column;gap:12px;}
+    .logos-faq__item{
+      background:#fff;border:1px solid var(--lf-border);border-radius:14px;
+      transition:border-color .2s ease, box-shadow .2s ease;
+    }
+    .logos-faq__item[open]{border-color:var(--lf-teal);box-shadow:0 12px 28px rgba(15,27,46,.06);}
+    .logos-faq__item summary{
+      list-style:none;cursor:pointer;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+      padding:20px 24px;color:var(--lf-navy);font-size:16.5px;font-weight:700;line-height:1.4;
+    }
+    .logos-faq__item summary::-webkit-details-marker{display:none;}
+    .logos-faq__item summary:focus-visible{outline:2px solid var(--lf-teal);outline-offset:2px;border-radius:14px;}
+    .logos-faq__plus{
+      flex:none;position:relative;width:28px;height:28px;border-radius:50%;
+      background:rgba(75,179,182,.12);transition:background .2s ease, transform .25s ease;
+    }
+    .logos-faq__plus::before,.logos-faq__plus::after{
+      content:"";position:absolute;left:50%;top:50%;background:var(--lf-teal-dark);
+      transform:translate(-50%,-50%);transition:opacity .2s ease;
+    }
+    .logos-faq__plus::before{width:12px;height:2px;}
+    .logos-faq__plus::after{width:2px;height:12px;}
+    .logos-faq__item[open] .logos-faq__plus{background:var(--lf-teal);transform:rotate(180deg);}
+    .logos-faq__item[open] .logos-faq__plus::before{background:#fff;}
+    .logos-faq__item[open] .logos-faq__plus::after{opacity:0;}
+    .logos-faq__answer{
+      padding:0 24px 22px;color:var(--lf-text-muted);font-size:15px;line-height:1.65;max-width:640px;
+    }
+    @media (max-width:900px){
+      .logos-faq__inner{grid-template-columns:1fr;gap:36px;}
+      .logos-faq__title{font-size:32px;}
+    }
+    @media (max-width:640px){
+      .logos-faq{padding:64px 16px;}
+      .logos-faq__item summary{padding:18px 16px;font-size:15.5px;}
+      .logos-faq__answer{padding:0 16px 20px;}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .logos-faq__item,.logos-faq__plus{transition:none;}
+    }
+  </style>
+
+  <div class="logos-faq__inner">
+    <div>
+      <div class="logos-faq__eyebrow">Вопросы и ответы</div>
+      <h2 class="logos-faq__title">Частые вопросы <em>о партнёрстве</em></h2>
+      <p class="logos-faq__subtitle">Если не нашли ответ — оставьте заявку, куратор свяжется и всё объяснит.</p>
+      <a class="logos-faq__ask" href="#lead-form">Задать свой вопрос</a>
+    </div>
+
+    <div class="logos-faq__list">
+      <details class="logos-faq__item" open>
+        <summary>Нужен ли юридический опыт, чтобы стать партнёром?<span class="logos-faq__plus"></span></summary>
+        <div class="logos-faq__answer">Нет. Вы только передаёте контакты клиента, а консультацию и сопровождение полностью берут на себя юристы ГК «Логос».</div>
+      </details>
+      <details class="logos-faq__item">
+        <summary>Как и когда приходят выплаты?<span class="logos-faq__plus"></span></summary>
+        <div class="logos-faq__answer">Вознаграждение начисляется после закрытия сделки и выплачивается раз в месяц в фиксированный расчётный день. Золотым партнёрам — два раза в месяц.</div>
+      </details>
+      <details class="logos-faq__item">
+        <summary>Можно ли совмещать партнёрство с основной работой?<span class="logos-faq__plus"></span></summary>
+        <div class="logos-faq__answer">Да. Программа не требует фиксированной загрузки: вы рекомендуете услуги тогда, когда у ваших клиентов или знакомых возникает такая потребность.</div>
+      </details>
+      <details class="logos-faq__item">
+        <summary>Как отслеживать статус переданного клиента?<span class="logos-faq__plus"></span></summary>
+        <div class="logos-faq__answer">В личном кабинете партнёра виден статус каждого клиента и начисленное вознаграждение. Дополнительно можно уточнить детали у куратора.</div>
+      </details>
+      <details class="logos-faq__item">
+        <summary>Какие документы нужны для оформления?<span class="logos-faq__plus"></span></summary>
+        <div class="logos-faq__answer">Для физических лиц, самозанятых, ИП и юридических лиц набор документов отличается. Точный список куратор назовёт после заявки; оформление занимает около одного дня.</div>
+      </details>
+      <details class="logos-faq__item">
+        <summary>Как повысить уровень и процент вознаграждения?<span class="logos-faq__plus"></span></summary>
+        <div class="logos-faq__answer">Уровень зависит от числа закрытых сделок за квартал: от 5 — серебряный, от 15 — золотой. Пересчёт происходит автоматически по итогам каждого квартала.</div>
+      </details>
+    </div>
+  </div>
+</section>
