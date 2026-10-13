@@ -1,0 +1,98 @@
+<footer class="logos-footer">
+  <style>
+    .logos-footer{
+      --lo-bg:#0a1424;
+      --lo-teal:#4bb3b6;
+      --lo-text:rgba(255,255,255,.85);
+      --lo-muted:rgba(255,255,255,.55);
+      --lo-border:rgba(255,255,255,.08);
+      box-sizing:border-box;
+      width:100%;
+      background:var(--lo-bg);
+      padding:72px 24px 32px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    }
+    .logos-footer *{box-sizing:border-box;}
+    .logos-footer__inner{max-width:1200px;margin:0 auto;}
+    .logos-footer__top{
+      display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:48px;
+      padding-bottom:48px;border-bottom:1px solid var(--lo-border);
+    }
+    .logos-footer__brand b{
+      display:block;color:#fff;font-size:24px;font-weight:800;letter-spacing:.22em;
+      text-transform:uppercase;margin-bottom:6px;
+    }
+    .logos-footer__brand small{
+      display:block;color:var(--lo-teal);font-size:11px;letter-spacing:.2em;
+      text-transform:uppercase;margin-bottom:20px;
+    }
+    .logos-footer__brand p{color:var(--lo-muted);font-size:14px;line-height:1.65;margin:0;max-width:340px;}
+    .logos-footer__title{
+      color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.14em;
+      text-transform:uppercase;margin:0 0 20px;
+    }
+    .logos-footer__links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+    .logos-footer a{color:var(--lo-text);font-size:14.5px;text-decoration:none;transition:color .2s ease;}
+    .logos-footer a:hover{color:var(--lo-teal);}
+    .logos-footer a:focus-visible{outline:2px solid var(--lo-teal);outline-offset:3px;border-radius:2px;}
+    .logos-footer__phone{display:block;color:#fff !important;font-size:22px !important;font-weight:800;margin-bottom:8px;}
+    .logos-footer__contacts p{color:var(--lo-muted);font-size:14px;line-height:1.6;margin:0 0 14px;}
+    .logos-footer__cta{
+      display:inline-block;margin-top:6px;background:var(--lo-teal);color:#0f1b2e !important;
+      font-weight:700;font-size:14px !important;padding:12px 22px;border-radius:10px;
+    }
+    .logos-footer__cta:hover{background:#3a9497;color:#0f1b2e !important;}
+    .logos-footer__bottom{
+      display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;padding-top:28px;
+    }
+    .logos-footer__legal{color:var(--lo-muted);font-size:12.5px;line-height:1.6;max-width:640px;margin:0;}
+    .logos-footer__docs{display:flex;flex-wrap:wrap;gap:8px 24px;}
+    .logos-footer__docs a{color:var(--lo-muted);font-size:12.5px;}
+    @media (max-width:900px){
+      .logos-footer__top{grid-template-columns:1fr 1fr;gap:40px;}
+      .logos-footer__brand{grid-column:1 / -1;}
+    }
+    @media (max-width:640px){
+      .logos-footer{padding:56px 16px 28px;}
+      .logos-footer__top{grid-template-columns:1fr;gap:32px;}
+      .logos-footer__bottom{flex-direction:column;}
+    }
+  </style>
+
+  <!-- ЗАГЛУШКИ: телефон, email, адрес, реквизиты и ссылки на документы замените на реальные -->
+  <div class="logos-footer__inner">
+    <div class="logos-footer__top">
+      <div class="logos-footer__brand">
+        <b>Логос</b>
+        <small>Партнёрская программа</small>
+        <p>Группа компаний «Логос» — десять лет на юридическом рынке. Приглашаем партнёров к долгосрочному сотрудничеству с прозрачными условиями.</p>
+      </div>
+
+      <div>
+        <h3 class="logos-footer__title">Разделы</h3>
+        <ul class="logos-footer__links">
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#audience">Кому подходит</a></li>
+          <li><a href="#steps">Как это работает</a></li>
+          <li><a href="#tiers">Условия</a></li>
+          <li><a href="#faq">Вопросы и ответы</a></li>
+        </ul>
+      </div>
+
+      <div class="logos-footer__contacts">
+        <h3 class="logos-footer__title">Контакты</h3>
+        <a class="logos-footer__phone" href="tel:+78000000000">8 (800) 000-00-00</a>
+        <p><a href="mailto:partner@example.ru">partner@example.ru</a><br>г. Москва, ул. Примерная, д. 1, офис 100<br>Пн–Пт, 9:00–19:00</p>
+        <a class="logos-footer__cta" href="#lead-form">Стать партнёром</a>
+      </div>
+    </div>
+
+    <div class="logos-footer__bottom">
+      <p class="logos-footer__legal">© 2026 ГК «Логос». ООО «Название», ИНН 0000000000, ОГРН 0000000000000. Информация на сайте не является публичной офертой.</p>
+      <div class="logos-footer__docs">
+        <a href="/privacy">Политика конфиденциальности</a>
+        <a href="/offer">Публичная оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
